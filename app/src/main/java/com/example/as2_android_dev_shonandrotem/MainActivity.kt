@@ -1,6 +1,8 @@
 package com.example.as2_android_dev_shonandrotem
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,25 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val addStudentButton: Button = findViewById(R.id.main_activity_button_add_student)
+        addStudentButton.setOnClickListener{
+            val intent =  Intent(this,AddStudentActivity::class.java)
+            startActivity(intent)
+        }
+
+        val showStudentList:Button = findViewById(R.id.main_activity_button_show_student_list)
+        showStudentList.setOnClickListener{
+            val intent =  Intent(this,StudentsRecyclerViewActivity::class.java)
+            startActivity(intent)
+
+        }
+
+
+
+
+
+
+
     }
+
 }

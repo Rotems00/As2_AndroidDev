@@ -13,6 +13,9 @@
         android:theme="@style/Theme.As2_Android_DevShonAndRotem"
         tools:targetApi="31">
         <activity
+            android:name=".StudentsRecyclerViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditStudentActivity"
             android:exported="false" />
         <activity
