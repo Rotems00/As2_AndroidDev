@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.as2_android_dev_shonandrotem"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.as2_android_dev_shonandrotem"
