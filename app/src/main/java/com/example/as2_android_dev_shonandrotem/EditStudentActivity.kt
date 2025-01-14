@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.as2_android_dev_shonandrotem.model.Model
 import com.example.as2_android_dev_shonandrotem.model.Student
+// Shon Hason - 316539352, Rotem Ziv- 209412279
 
 class EditStudentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

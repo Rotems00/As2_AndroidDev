@@ -1,5 +1,5 @@
 package com.example.as2_android_dev_shonandrotem
-
+// Shon Hason - 316539352, Rotem Ziv- 209412279
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
