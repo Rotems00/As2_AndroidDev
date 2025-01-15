@@ -1,6 +1,7 @@
 package com.example.as2_android_dev_shonandrotem
 // Shon Hason - 316539352, Rotem Ziv- 209412279
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -25,7 +26,9 @@ class AddStudentActivity : AppCompatActivity() {
         val saveButton: Button = findViewById(R.id.activity_edit_student_btn_save)
         val cancelButton:Button = findViewById(R.id.activity_edit_student_btn_cancel)
         val nameEditText:EditText = findViewById(R.id.activity_edit_student_plain_text_name)
-        val IdEditText:EditText = findViewById(R.id.activity_edit_student_plain_text_id)
+        val idEditText:EditText = findViewById(R.id.activity_edit_student_plain_text_id)
+        val phoneEditText: EditText = findViewById(R.id.activity_edit_student_plain_text_phone)
+        val addressEditText: EditText = findViewById(R.id.activity_edit_student_plain_text_address)
         val saveMessage: TextView = findViewById(R.id.activity_edit_student_plaintext_save_message)
 
         cancelButton.setOnClickListener{
@@ -34,24 +37,31 @@ class AddStudentActivity : AppCompatActivity() {
 
         saveButton.setOnClickListener{
             val nameOfNewStudent = nameEditText.text.toString()
-            val idOfNewStudent = IdEditText.text.toString()
-            if(nameOfNewStudent.isNotBlank() && idOfNewStudent.isNotBlank())
-            {
+            val idOfNewStudent = idEditText.text.toString()
+            val phoneOfNewStudent = phoneEditText.text.toString()
+            val addressOfNewStudent = addressEditText.text.toString()
+            if (nameOfNewStudent.isNotBlank() && idOfNewStudent.isNotBlank() && phoneOfNewStudent.isNotBlank() && addressOfNewStudent.isNotBlank()) {
                 val newStudent = Student(
                     name = nameOfNewStudent,
                     id = idOfNewStudent,
+                    phoneNu = phoneOfNewStudent,
+                    Address = addressOfNewStudent,
                     avatarUrl = "",
                     isChecked = false
                 )
                 Model.instance.students.add(newStudent)
-                saveMessage.text = "Name:${nameEditText.text} ID :${IdEditText.text} is saved!"
-            }
-            else
-            {
-                saveMessage.text = "Please fill in both Name and ID."
+                saveMessage.text = "Name: $nameOfNewStudent, ID: $idOfNewStudent is saved!"
+                val intent = Intent(this, StudentsRecyclerViewActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+                startActivity(intent)
+
+            } else {
+                saveMessage.text = "Please fill in all fields."
             }
 
-            finish()
+
+
 
 
 

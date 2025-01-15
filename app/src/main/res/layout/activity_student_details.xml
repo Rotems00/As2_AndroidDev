@@ -34,11 +34,31 @@
         android:id="@+id/student_details_activity_text_view_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
+        android:layout_marginStart="40dp"
         android:text="ID"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/student_details_activity_text_view_phone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/student_details_activity_text_view_name" />
+
+    <TextView
+        android:id="@+id/student_details_activity_text_view_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Phone Number"
+        app:layout_constraintBottom_toTopOf="@+id/student_details_activity_text_view_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_activity_text_view_id" />
+
+    <TextView
+        android:id="@+id/student_details_activity_text_view_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Address"
+        app:layout_constraintBottom_toTopOf="@+id/student_details_checkbox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_activity_text_view_phone" />
 
     <TextView
         android:id="@+id/student_details_textview_name_added"
@@ -56,5 +76,37 @@
         android:layout_height="wrap_content"
         app:layout_constraintBaseline_toBaselineOf="@+id/student_details_activity_text_view_id"
         app:layout_constraintStart_toStartOf="@+id/student_details_textview_name_added" />
+
+    <TextView
+        android:id="@+id/student_details_textview_phone_added"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/student_details_activity_text_view_phone"
+        app:layout_constraintStart_toStartOf="@+id/student_details_textview_id_added" />
+
+    <TextView
+        android:id="@+id/student_details_textview_address_added"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toBaselineOf="@+id/student_details_activity_text_view_address"
+        app:layout_constraintStart_toStartOf="@+id/student_details_textview_phone_added" />
+
+    <CheckBox
+        android:id="@+id/student_details_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_student_details_edit_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_details_activity_text_view_address" />
+
+    <Button
+        android:id="@+id/activity_student_details_edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

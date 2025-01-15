@@ -38,6 +38,12 @@ class StudentsRecyclerViewAdapter(private val students:List<Student>?):RecyclerV
                 val intent = Intent(holder.itemView.context,StudentDetailsActivity::class.java)
                 intent.putExtra("STUDENT_NAME", students?.get(position)?.name)
                 intent.putExtra("STUDENT_ID", students?.get(position)?.id)
+                intent.putExtra("STUDENT_PHONE", students?.get(position)?.phoneNu)
+                intent.putExtra("STUDENT_ADDRESS", students?.get(position)?.Address)
+                intent.putExtra("STUDENT_CHECKED", students?.get(position)?.isChecked)
+                intent.putExtra("STUDENT_INDEX",position)
+
+
                 holder.itemView.context.startActivity(intent)
 
             }
