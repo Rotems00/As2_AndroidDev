@@ -147,7 +147,7 @@
         app:layout_constraintStart_toEndOf="@+id/activity_edit_student_text_view_phone"
         app:layout_constraintTop_toBottomOf="@+id/activity_edit_student_plain_text_id" />
 
-    <!-- Address TextView -->
+
     <TextView
         android:id="@+id/activity_edit_student_text_view_address"
         android:layout_width="wrap_content"
@@ -158,7 +158,7 @@
         app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_plain_text_address"
         app:layout_constraintStart_toStartOf="@+id/activity_edit_student_text_view_name" />
 
-    <!-- Address EditText -->
+
     <EditText
         android:id="@+id/activity_edit_student_plain_text_address"
         android:layout_width="0dp"
