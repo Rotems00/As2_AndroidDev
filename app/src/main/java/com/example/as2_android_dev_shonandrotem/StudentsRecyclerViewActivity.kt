@@ -1,6 +1,9 @@
 package com.example.as2_android_dev_shonandrotem
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,12 +25,21 @@ class StudentsRecyclerViewActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val editButton: ImageButton= findViewById(R.id.activity_students_recyclerview_image_button_add)
         students = Model.instance.students
         val recyclerView:RecyclerView = findViewById(R.id.activity_studentsRecyclerView)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this)
         val adapter = StudentsRecyclerViewAdapter(students)
         recyclerView.adapter = adapter
+
+
+        editButton.setOnClickListener{
+
+            val intent = Intent(this,AddStudentActivity::class.java)
+            startActivity(intent)
+
+        }
 
 
 

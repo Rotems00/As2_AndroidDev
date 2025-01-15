@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditStudentActivity">
+
+
     <TextView
         android:id="@+id/activity_edit_student_plaintext_save_message"
         android:layout_width="0dp"
@@ -17,6 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <Button
         android:id="@+id/activity_edit_student_btn_save"
         android:layout_width="0dp"
@@ -26,8 +29,22 @@
         android:layout_marginBottom="40dp"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_btn_cancel"
+        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_btn_delete"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/activity_edit_student_btn_delete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="40dp"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_btn_cancel"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_btn_save" />
+
 
     <Button
         android:id="@+id/activity_edit_student_btn_cancel"
@@ -35,10 +52,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
         android:text="Cancel"
-        app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_btn_save"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_btn_save" />
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_btn_delete" />
+
 
     <ImageView
         android:id="@+id/activity_add_student_view_image"
@@ -48,6 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/man" />
+
 
     <TextView
         android:id="@+id/activity_edit_student_text_view_name"
@@ -59,6 +79,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_plain_text_name"
         app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_plain_text_name"
         app:layout_constraintStart_toStartOf="parent" />
+
 
     <EditText
         android:id="@+id/activity_edit_student_plain_text_name"
@@ -74,6 +95,7 @@
         app:layout_constraintStart_toEndOf="@+id/activity_edit_student_text_view_name"
         app:layout_constraintTop_toBottomOf="@+id/activity_add_student_view_image" />
 
+
     <TextView
         android:id="@+id/activity_edit_student_text_view_id"
         android:layout_width="wrap_content"
@@ -84,6 +106,7 @@
         app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_plain_text_id"
         app:layout_constraintStart_toStartOf="@+id/activity_edit_student_text_view_name" />
 
+
     <EditText
         android:id="@+id/activity_edit_student_plain_text_id"
         android:layout_width="0dp"
@@ -93,9 +116,61 @@
         android:layout_marginEnd="10dp"
         android:ems="10"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/activity_edit_student_plain_text_phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/activity_edit_student_text_view_id"
         app:layout_constraintTop_toBottomOf="@+id/activity_edit_student_plain_text_name" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/activity_edit_student_text_view_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="Phone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_plain_text_phone"
+        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_plain_text_phone"
+        app:layout_constraintStart_toStartOf="@+id/activity_edit_student_text_view_name" />
+
+
+    <EditText
+        android:id="@+id/activity_edit_student_plain_text_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/activity_edit_student_plain_text_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_text_view_phone"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_student_plain_text_id" />
+
+    <!-- Address TextView -->
+    <TextView
+        android:id="@+id/activity_edit_student_text_view_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="Address"
+        app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_plain_text_address"
+        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_plain_text_address"
+        app:layout_constraintStart_toStartOf="@+id/activity_edit_student_text_view_name" />
+
+    <!-- Address EditText -->
+    <EditText
+        android:id="@+id/activity_edit_student_plain_text_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toTopOf="@+id/activity_edit_student_plaintext_save_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_text_view_address"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_student_plain_text_phone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

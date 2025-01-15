@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -94,8 +93,57 @@
         android:layout_marginEnd="10dp"
         android:ems="10"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/activity_edit_student_plain_text_phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/activity_edit_student_text_view_id"
         app:layout_constraintTop_toBottomOf="@+id/activity_edit_student_plain_text_name" />
+
+    <TextView
+        android:id="@+id/activity_edit_student_text_view_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="Phone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_plain_text_phone"
+        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_plain_text_phone"
+        app:layout_constraintStart_toStartOf="@+id/activity_edit_student_text_view_name" />
+
+    <EditText
+        android:id="@+id/activity_edit_student_plain_text_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/activity_edit_student_plain_text_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_text_view_phone"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_student_plain_text_id" />
+
+    <TextView
+        android:id="@+id/activity_edit_student_text_view_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="Address"
+        app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_plain_text_address"
+        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_plain_text_address"
+        app:layout_constraintStart_toStartOf="@+id/activity_edit_student_text_view_name" />
+
+    <EditText
+        android:id="@+id/activity_edit_student_plain_text_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toTopOf="@+id/activity_edit_student_plaintext_save_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_text_view_address"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_student_plain_text_phone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
